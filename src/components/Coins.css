@@ -1,0 +1,140 @@
+/* Coins.css */
+
+.search-bar {
+  position: absolute;
+  top: 90px; /* Adjust based on your header height */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  height: 2rem;
+  width: 20rem;
+  padding: 8px 10px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btns {
+  display: flex;
+  margin-left: 10px;
+  margin: 20px;
+}
+
+.btns button {
+  height: 2rem;
+  width: 5rem;
+  background-color: rgb(95, 16, 168);
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btns button:hover {
+  background-color: #ffcc00;
+}
+
+.coin-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 160px;
+  padding: 20px;
+}
+
+.coin-cards-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.coin-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.coin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coin-card .image img {
+  height: 70px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.coin-card .details {
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.coin-card .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.coin-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.coin-card .change {
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.coin-card .change.positive {
+  color: green;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.coin-card .change.negative {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.toggle-view {
+  display: flex;
+  justify-content: center;
+  margin-left: 500px;
+}
+
+.toggle-view button {
+  height: 3rem;
+  width: 15rem;
+  background-color: #eb8a0c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-view button:hover {
+  background-color: #ffaa33;
+}
+
+@media (max-width: 768px) {
+  .coin-cards-container {
+    grid-template-columns: 1fr;
+  }
+}

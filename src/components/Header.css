@@ -1,0 +1,150 @@
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+.nav-button {
+  background-color: #eb8a0c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffaf40;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #eb8a0c; /* Dark background */
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem; /* Larger font size */
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.navbar .logo svg {
+  font-size: 1.8rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff; /* White text color */
+  font-weight: 500; /* Medium font weight */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar ul li a:hover {
+  color: #000000; /* Yellow hover color */
+}
+
+.navbar .btn-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar .btn-container button {
+  background-color: #eb8a0c; /* Orange button color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.navbar .btn-container button:hover {
+  background-color: #ffaf40; /* Lighter orange on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .navbar .logo h1 {
+    font-size: 1.6rem; /* Smaller font size */
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1d; /* Dark background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    margin: 1rem 0;
+    margin-left: 0;
+  }
+}
